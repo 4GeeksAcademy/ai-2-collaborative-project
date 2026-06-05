@@ -167,6 +167,11 @@ Content:
 - Search field (visual only)
 - User account entry (visual only)
 
+Primary navigation policy:
+- Top navbar links must include only: Home, Catalog, Cart.
+- Product page access must come from selecting a product item in the Catalog listing.
+- Checkout page access must come from the Cart summary action (purchase/continue flow).
+
 Semantic structure:
 - In `header`
 - Main links in `nav` with a list structure
@@ -189,9 +194,7 @@ Canonical implementation (copy/paste on every page):
       <ul class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
         <li><a href="index.html" class="hover:underline">Home</a></li>
         <li><a href="catalog.html" class="hover:underline">Catalog</a></li>
-        <li><a href="product.html" class="hover:underline">Product</a></li>
         <li><a href="cart.html" class="hover:underline">Cart</a></li>
-        <li><a href="checkout.html" class="hover:underline">Checkout</a></li>
       </ul>
     </nav>
 
@@ -294,6 +297,9 @@ Required sections:
 3. Product listing grid
 4. Shared footer
 
+Navigation requirement:
+- Each product card must provide an internal link to the Product View page.
+
 Filters shown:
 - Category
 - Size
@@ -331,6 +337,9 @@ Required sections:
 3. Product row list
 4. Summary panel
 5. Shared footer
+
+Navigation requirement:
+- The summary panel purchase action must provide an internal link to the Checkout page.
 
 Cart row fields:
 - Thumbnail
@@ -373,6 +382,10 @@ Per page:
 - Internal links to relevant pages
 - Human-readable URL/file naming
 
+Internal linking minimums:
+- Catalog page includes links from product cards to Product View.
+- Cart page includes a link from summary purchase action to Checkout.
+
 Suggested title pattern:
 - Home: Maison Elise | French Women Boutique
 - Catalog: Catalog | Maison Elise
@@ -410,6 +423,7 @@ Shared component rule with single-page ownership:
 Branch consistency rules:
 - Do not redefine tokens per page.
 - Reuse shared navbar/footer exactly.
+- Keep top navbar links limited to Home, Catalog, and Cart across all pages.
 - Verify mobile and desktop screenshots before PR.
 - Run semantic HTML checklist before review.
 
@@ -423,13 +437,14 @@ Definition of done per page:
 ## 11. Final QA Checklist
 Before merge, verify:
 1. Shared navbar/footer match the global spec.
-2. Mobile-first behavior is complete before desktop refinements.
-3. Semantic landmarks and heading hierarchy are correct.
-4. Placeholder images are clothing-focused and ratio-consistent.
-5. All required page sections from the assignment are present.
-6. SEO requirements are complete.
-7. GEO requirements are complete.
-8. The implementation remains aligned to boutique storefront scope only.
+2. Product is reachable from Catalog product cards, and Checkout is reachable from Cart summary action.
+3. Mobile-first behavior is complete before desktop refinements.
+4. Semantic landmarks and heading hierarchy are correct.
+5. Placeholder images are clothing-focused and ratio-consistent.
+6. All required page sections from the assignment are present.
+7. SEO requirements are complete.
+8. GEO requirements are complete.
+9. The implementation remains aligned to boutique storefront scope only.
 
 ## 12. Out of Scope
 - Authentication system
