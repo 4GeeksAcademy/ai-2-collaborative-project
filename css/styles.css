@@ -1,0 +1,147 @@
+:root {
+  --black: #1A1A1A;
+  --charcoal: #2D2D2D;
+  --smoke: #6B6B6B;
+  --silver: #C4C4C4;
+  --pearl: #F5F5F3;
+  --cream: #FDFCFA;
+  --white: #FAFAFA;
+  --gold: #C9A84C;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: var(--charcoal);
+  background-color: var(--cream);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--black);
+  line-height: 1.2;
+}
+
+p,
+li,
+input,
+select,
+button,
+a {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+a,
+button,
+input {
+  transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+label,
+.ui-label,
+button,
+.nav-link {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+a:hover,
+button:hover,
+.nav-link:hover {
+  color: var(--gold);
+}
+
+button:hover {
+  border-color: var(--gold);
+}
+
+:focus-visible {
+  outline: 1px solid var(--charcoal);
+  outline-offset: 2px;
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.bg-pearl {
+  background-color: var(--pearl);
+}
+
+.bg-white-soft {
+  background-color: var(--white);
+}
+
+.text-black-soft {
+  color: var(--black);
+}
+
+.text-charcoal {
+  color: var(--charcoal);
+}
+
+.text-smoke {
+  color: var(--smoke);
+}
+
+.border-silver {
+  border-color: var(--silver);
+}
+
+.btn-primary {
+  background-color: var(--charcoal);
+  border: 1px solid var(--charcoal);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--charcoal);
+}
+
+.input-base {
+  width: 100%;
+  border: 1px solid var(--silver);
+  background-color: var(--white);
+  color: var(--charcoal);
+  padding: 0.7rem 0.75rem;
+}
+
+.helper-text {
+  font-size: 0.8rem;
+  color: var(--smoke);
+}
+
+.summary-surface {
+  border: 1px solid var(--silver);
+  background-color: var(--pearl);
+}
+
+.form-step {
+  border: 1px solid var(--silver);
+  background-color: var(--white);
+}
+
+.progress-step {
+  border: 1px solid var(--silver);
+  background-color: var(--pearl);
+}
