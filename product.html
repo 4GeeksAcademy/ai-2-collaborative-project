@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | Maison Elise</title>
+  <meta name="description" content="View product details, materials, and size options from Maison Elise." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@200;300;400&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-cream text-charcoal">
+  <header class="border-b border-silver bg-pearl">
+    <section class="mx-auto max-w-6xl px-4 py-4 md:px-6 lg:px-8">
+      <section class="flex items-center justify-between gap-4" aria-label="Brand and account">
+        <a href="index.html" class="text-4xl text-black-soft">Maison Elise</a>
+        <a href="#" class="nav-link text-charcoal">Account</a>
+      </section>
+      <nav aria-label="Primary" class="mt-4">
+        <ul class="flex flex-wrap gap-x-4 gap-y-2">
+          <li><a href="index.html" class="nav-link text-charcoal">Home</a></li>
+          <li><a href="catalog.html" class="nav-link text-charcoal">Catalog</a></li>
+          <li><a href="cart.html" class="nav-link text-charcoal">Cart</a></li>
+        </ul>
+      </nav>
+      <form role="search" aria-label="Site search" class="mt-4">
+        <label for="site-search" class="sr-only">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search dresses, blouses, coats..." class="input-base mt-2" />
+      </form>
+    </section>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-8 md:px-6 lg:px-8">
+    <section class="border-b border-silver pb-6" aria-labelledby="product-title">
+      <h1 id="product-title" class="text-5xl">Silk Wrap Dress</h1>
+      <p class="mt-3 text-sm text-smoke">Reference ME-4012</p>
+    </section>
+
+    <section class="mt-8 grid gap-8 lg:grid-cols-2" aria-label="Product overview">
+      <section class="form-step p-6" aria-label="Product image area">
+        <h2 class="text-3xl">Image</h2>
+        <p class="mt-3 text-sm text-smoke">Placeholder area for 4:5 product image.</p>
+      </section>
+      <section class="form-step p-6" aria-label="Product purchase details">
+        <h2 class="text-3xl">Details</h2>
+        <p class="mt-2 text-sm text-smoke">Size: S, M, L</p>
+        <p class="mt-2 text-sm text-smoke">Price: EUR 89</p>
+        <p class="mt-2 text-sm text-smoke">Quantity selector visual only.</p>
+        <a href="cart.html" class="btn-primary mt-4 inline-block px-6 py-3">Add to cart</a>
+      </section>
+    </section>
+
+    <section class="mt-8 form-step p-6" aria-labelledby="product-materials">
+      <h2 id="product-materials" class="text-3xl">Materials and Use</h2>
+      <p class="mt-3 text-sm text-smoke">Main fabric: 92% silk, 8% elastane. Recommended for evening occasions and formal events.</p>
+    </section>
+  </main>
+
+  <footer class="mt-12 border-t border-silver bg-pearl">
+    <section class="mx-auto max-w-6xl px-4 py-10 md:px-6 lg:px-8">
+      <section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <section aria-labelledby="footer-categories"><h2 id="footer-categories" class="text-3xl">Categories</h2><ul class="mt-3 space-y-2 text-sm text-smoke"><li><a href="#" class="text-charcoal">Footwear</a></li><li><a href="#" class="text-charcoal">Shirts</a></li><li><a href="#" class="text-charcoal">Pants</a></li><li><a href="#" class="text-charcoal">Accessories</a></li></ul></section>
+        <section aria-labelledby="footer-legal"><h2 id="footer-legal" class="text-3xl">Legal</h2><ul class="mt-3 space-y-2 text-sm text-smoke"><li><a href="#" class="text-charcoal">Terms and Conditions</a></li><li><a href="#" class="text-charcoal">Privacy Policy</a></li><li><a href="#" class="text-charcoal">About the Brand</a></li></ul></section>
+        <section aria-labelledby="footer-contact"><h2 id="footer-contact" class="text-3xl">Contact</h2><address class="mt-3 not-italic text-sm leading-6 text-smoke">Maison Elise Boutique, 24 Rue des Rosiers, Paris, hello@maisonelise.fr, +33 1 44 00 12 34</address></section>
+      </section>
+    </section>
+  </footer>
+</body>
+</html>
