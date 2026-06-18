@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head itemscope itemtype="https://schema.org/CheckoutPage">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Maison Elise</title>
+  <meta
+    name="description"
+    content="Finalize your Maison Elise order with secure checkout details, shipping information, and card payment fields."
+  />
+  <meta itemprop="name" content="Checkout | Maison Elise" />
+  <meta
+    itemprop="description"
+    content="Three-step checkout form for personal details, shipping address, and card payment details for Maison Elise."
+  />
+  <meta itemprop="inLanguage" content="fr-FR" />
+  <meta itemprop="isPartOf" content="Maison Elise Boutique Website" />
+  <meta itemprop="publisher" content="Maison Elise" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@200;300;400&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-cream text-charcoal">
+  <header class="border-b" style="border-color: var(--color-border-soft); background: var(--color-bg-soft);">
+    <div class="mx-auto max-w-[1200px] px-4 py-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-3">
+        <a href="index.html" class="font-serif text-2xl tracking-wide" style="color: var(--color-text-main);">Maison Elise</a>
+        <a href="#" class="text-sm font-semibold uppercase tracking-[0.08em]" style="color: var(--color-text-main);">Account</a>
+      </div>
+
+      <nav aria-label="Primary" class="mt-3">
+        <ul class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="catalog.html" class="hover:underline">Catalog</a></li>
+          <li><a href="cart.html" class="hover:underline">Cart</a></li>
+        </ul>
+      </nav>
+
+      <form role="search" aria-label="Site search" class="mt-3">
+        <label for="site-search" class="sr-only">Search products</label>
+        <input
+          id="site-search"
+          name="q"
+          type="search"
+          placeholder="Search dresses, blouses, coats..."
+          class="w-full rounded-md border px-3 py-2 text-sm"
+          style="border-color: var(--color-border-soft); background: var(--color-surface); color: var(--color-text-main);"
+        />
+      </form>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-8 md:px-6 lg:px-8">
+    <section aria-labelledby="checkout-title" class="border-b border-silver pb-6">
+      <h1 id="checkout-title" class="text-4xl md:text-5xl">Checkout</h1>
+      <p class="mt-3 max-w-3xl text-sm text-smoke">
+        Complete your order in three steps with clear personal, shipping, and payment details.
+      </p>
+    </section>
+
+    <section aria-labelledby="checkout-progress" class="mt-8">
+      <h2 id="checkout-progress" class="text-3xl md:text-4xl">Order Progress</h2>
+      <ol class="mt-4 grid gap-3 md:grid-cols-3" aria-label="Checkout steps">
+        <li class="progress-step p-4">
+          <p class="ui-label text-charcoal">Step 1</p>
+          <p class="mt-1 text-sm text-charcoal">Personal details</p>
+        </li>
+        <li class="progress-step p-4">
+          <p class="ui-label text-charcoal">Step 2</p>
+          <p class="mt-1 text-sm text-charcoal">Shipping address</p>
+        </li>
+        <li class="progress-step p-4">
+          <p class="ui-label text-charcoal">Step 3</p>
+          <p class="mt-1 text-sm text-charcoal">Card payment details</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="mt-8 grid gap-8 lg:grid-cols-3" aria-label="Checkout content">
+      <form class="space-y-6 lg:col-span-2" action="#" method="post">
+        <fieldset class="form-step p-5 md:p-6">
+          <legend class="text-2xl md:text-3xl">Personal Details</legend>
+          <p class="helper-text mt-2">Use the same name and contact information associated with your order.</p>
+          <section class="mt-4 grid gap-4 md:grid-cols-2">
+            <p>
+              <label for="first-name" class="ui-label text-charcoal">First name</label>
+              <input
+                id="first-name"
+                name="first-name"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="2"
+                maxlength="40"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,40}"
+              />
+            </p>
+            <p>
+              <label for="last-name" class="ui-label text-charcoal">Last name</label>
+              <input
+                id="last-name"
+                name="last-name"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="2"
+                maxlength="40"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,40}"
+              />
+            </p>
+            <p>
+              <label for="email" class="ui-label text-charcoal">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="input-base mt-2"
+                required
+                maxlength="100"
+              />
+            </p>
+            <p>
+              <label for="phone" class="ui-label text-charcoal">Phone</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                class="input-base mt-2"
+                required
+                minlength="8"
+                maxlength="20"
+                pattern="[0-9 +()-]{8,20}"
+              />
+            </p>
+          </section>
+        </fieldset>
+
+        <fieldset class="form-step p-5 md:p-6">
+          <legend class="text-2xl md:text-3xl">Shipping Address</legend>
+          <p class="helper-text mt-2">Enter your delivery address exactly as it appears on your building mailbox.</p>
+          <section class="mt-4 grid gap-4 md:grid-cols-2">
+            <p class="md:col-span-2">
+              <label for="address-line-1" class="ui-label text-charcoal">Address line 1</label>
+              <input
+                id="address-line-1"
+                name="address-line-1"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="5"
+                maxlength="80"
+              />
+            </p>
+            <p class="md:col-span-2">
+              <label for="address-line-2" class="ui-label text-charcoal">Address line 2</label>
+              <input
+                id="address-line-2"
+                name="address-line-2"
+                type="text"
+                class="input-base mt-2"
+                maxlength="80"
+              />
+            </p>
+            <p>
+              <label for="city" class="ui-label text-charcoal">City</label>
+              <input
+                id="city"
+                name="city"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="2"
+                maxlength="60"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,60}"
+              />
+            </p>
+            <p>
+              <label for="postal-code" class="ui-label text-charcoal">Postal code</label>
+              <input
+                id="postal-code"
+                name="postal-code"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="5"
+                maxlength="5"
+                pattern="[0-9]{5}"
+              />
+            </p>
+            <p class="md:col-span-2">
+              <label for="country" class="ui-label text-charcoal">Country</label>
+              <input
+                id="country"
+                name="country"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="2"
+                maxlength="56"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,56}"
+              />
+            </p>
+          </section>
+        </fieldset>
+
+        <fieldset class="form-step p-5 md:p-6">
+          <legend class="text-2xl md:text-3xl">Card Payment Details</legend>
+          <p class="helper-text mt-2">This academic project form uses HTML validation only and does not process real payments.</p>
+          <section class="mt-4 grid gap-4 md:grid-cols-2">
+            <p class="md:col-span-2">
+              <label for="card-name" class="ui-label text-charcoal">Name on card</label>
+              <input
+                id="card-name"
+                name="card-name"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}"
+              />
+            </p>
+            <p class="md:col-span-2">
+              <label for="card-number" class="ui-label text-charcoal">Card number</label>
+              <input
+                id="card-number"
+                name="card-number"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="16"
+                maxlength="16"
+                pattern="[0-9]{16}"
+              />
+            </p>
+            <p>
+              <label for="expiry" class="ui-label text-charcoal">Expiry date (MM/YY)</label>
+              <input
+                id="expiry"
+                name="expiry"
+                type="text"
+                class="input-base mt-2"
+                required
+                minlength="5"
+                maxlength="5"
+                pattern="(0[1-9]|1[0-2])/[0-9]{2}"
+              />
+            </p>
+            <p>
+              <label for="cvv" class="ui-label text-charcoal">CVV</label>
+              <input
+                id="cvv"
+                name="cvv"
+                type="password"
+                class="input-base mt-2"
+                required
+                minlength="3"
+                maxlength="4"
+                pattern="[0-9]{3,4}"
+              />
+            </p>
+            <p class="md:col-span-2">
+              <input id="terms" name="terms" type="checkbox" required class="mr-2 align-middle" />
+              <label for="terms" class="ui-label text-charcoal align-middle">I agree to the terms and conditions</label>
+            </p>
+          </section>
+          <button type="submit" class="btn-primary mt-6 w-full px-4 py-3 lg:w-auto">
+            Complete order
+          </button>
+        </fieldset>
+      </form>
+
+      <aside class="summary-surface p-5 md:p-6 lg:h-max" aria-labelledby="order-summary-title">
+        <h2 id="order-summary-title" class="text-3xl md:text-4xl">Order Summary</h2>
+        <p class="helper-text mt-2">Review your purchase before submitting checkout details.</p>
+        <section class="mt-5 border-t border-silver pt-4" aria-label="Summary line items">
+          <p class="flex items-center justify-between text-sm text-charcoal">
+            <span>Subtotal</span>
+            <strong>€168.00</strong>
+          </p>
+          <p class="mt-3 flex items-center justify-between text-sm text-charcoal">
+            <span>Shipping</span>
+            <strong>€12.00</strong>
+          </p>
+          <p class="mt-3 flex items-center justify-between text-sm text-charcoal">
+            <span>Tax</span>
+            <strong>€18.00</strong>
+          </p>
+          <p class="mt-4 flex items-center justify-between border-t border-silver pt-4 text-sm text-charcoal">
+            <span>Total</span>
+            <strong>€198.00</strong>
+          </p>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="mt-12 border-t border-silver bg-pearl">
+    <section class="mx-auto max-w-6xl px-4 py-10 md:px-6 lg:px-8">
+      <section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <section aria-labelledby="footer-categories">
+          <h2 id="footer-categories" class="text-3xl">Categories</h2>
+          <ul class="mt-3 space-y-2 text-sm text-smoke">
+            <li><a href="#" class="text-charcoal">Footwear</a></li>
+            <li><a href="#" class="text-charcoal">Shirts</a></li>
+            <li><a href="#" class="text-charcoal">Pants</a></li>
+            <li><a href="#" class="text-charcoal">Accessories</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-legal">
+          <h2 id="footer-legal" class="text-3xl">Legal</h2>
+          <ul class="mt-3 space-y-2 text-sm text-smoke">
+            <li><a href="#" class="text-charcoal">Terms and Conditions</a></li>
+            <li><a href="#" class="text-charcoal">Privacy Policy</a></li>
+            <li><a href="#" class="text-charcoal">About the Brand</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-contact">
+          <h2 id="footer-contact" class="text-3xl">Contact</h2>
+          <address class="mt-3 not-italic text-sm leading-6 text-smoke">
+            Maison Elise Boutique,
+            24 Rue des Rosiers, Paris,
+            hello@maisonelise.fr,
+            +33 1 44 00 12 34
+          </address>
+        </section>
+      </section>
+    </section>
+  </footer>
+</body>
+</html>
